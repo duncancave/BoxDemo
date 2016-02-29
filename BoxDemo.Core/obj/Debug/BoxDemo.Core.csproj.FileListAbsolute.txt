@@ -1,0 +1,5 @@
+C:\GitHub\BoxDemo\BoxDemo.Core\bin\Debug\BoxDemo.Core.dll
+C:\GitHub\BoxDemo\BoxDemo.Core\bin\Debug\BoxDemo.Core.pdb
+C:\GitHub\BoxDemo\BoxDemo.Core\obj\Debug\BoxDemo.Core.csprojResolveAssemblyReference.cache
+C:\GitHub\BoxDemo\BoxDemo.Core\obj\Debug\BoxDemo.Core.dll
+C:\GitHub\BoxDemo\BoxDemo.Core\obj\Debug\BoxDemo.Core.pdb
