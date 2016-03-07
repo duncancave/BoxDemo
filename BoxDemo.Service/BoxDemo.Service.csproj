@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoxService.cs" />
+    <Compile Include="Interfaces\IPipeService.cs" />
     <Compile Include="PipeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

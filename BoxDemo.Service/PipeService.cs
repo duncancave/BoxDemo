@@ -1,9 +1,11 @@
 ﻿using BoxDemo.Data.Entities;
+using BoxDemo.Service.Interfaces;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace BoxDemo.Service
 {
-    public class PipeService
+    public class PipeService : IPipeService
     {
         /// <summary>
         /// Checks to see if the box contains the required stuff to go through the pipe
@@ -16,6 +18,11 @@ namespace BoxDemo.Service
             var result = pipe.AllowedStuff.All(stuff => box.BunchOfStuff.Any(s => s.Type == stuff.Type));
 
             return result;
+        }
+
+        public List<Pipe> GetPipes()
+        {
+            return new List<Pipe>();
         }
     }
 }
