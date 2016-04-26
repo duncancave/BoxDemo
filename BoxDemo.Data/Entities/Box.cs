@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace BoxDemo.Data.Entities
+﻿namespace BoxDemo.Data.Entities
 {
+    using System;
+    using System.Collections.Generic;
+
     public class Box
     {
         public Guid Id { get; set; }

@@ -1,8 +1,9 @@
-﻿using BoxDemo.Core.Enums;
-using System;
-
-namespace BoxDemo.Data.Entities
+﻿namespace BoxDemo.Data.Entities
 {
+    using System;
+
+    using BoxDemo.Core.Enums;
+
     public class Stuff
     {
         public Guid Id { get; set; }

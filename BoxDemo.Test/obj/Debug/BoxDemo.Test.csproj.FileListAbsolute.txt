@@ -9,3 +9,5 @@ C:\GitHub\BoxDemo\BoxDemo.Test\obj\Debug\BoxDemo.Test.dll
 C:\GitHub\BoxDemo\BoxDemo.Test\obj\Debug\BoxDemo.Test.pdb
 C:\GitHub\BoxDemo\BoxDemo.Test\bin\Debug\BoxDemo.Core.dll
 C:\GitHub\BoxDemo\BoxDemo.Test\bin\Debug\BoxDemo.Core.pdb
+C:\GitHub\BoxDemo\BoxDemo.Test\bin\Debug\Moq.dll
+C:\GitHub\BoxDemo\BoxDemo.Test\bin\Debug\Moq.xml

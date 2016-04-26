@@ -1,22 +1,25 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BoxDemo.Data.Entities;
-using BoxDemo.Service;
-using System.Collections.Generic;
-using Moq;
-using BoxDemo.Service.Interfaces;
-
-namespace BoxDemo.Test
+﻿namespace BoxDemo.Test
 {
+    using System;
+    using System.Collections.Generic;
+
+    using BoxDemo.Data.Entities;
+    using BoxDemo.Service;
+    using BoxDemo.Service.Interfaces;
+
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    using Moq;
+
     [TestClass]
     public class ServiceTests
     {
-        private PipeService pipeService { get; set; }
+        private PipeService PipeService { get; set; }
 
         [TestInitialize]
         public void Setup()
         {
-            pipeService = new PipeService();
+            this.PipeService = new PipeService();
         }
 
         [TestMethod]
@@ -24,20 +27,24 @@ namespace BoxDemo.Test
         {
             // Arrange
             var box = new Box();
-            var stuffForBox = new List<Stuff>();
-            stuffForBox.Add(new Stuff { Id = Guid.NewGuid(), Name = "Cheese", Type = Core.Enums.StuffType.Small });
-            stuffForBox.Add(new Stuff { Id = Guid.NewGuid(), Name = "Hammer", Type = Core.Enums.StuffType.Large });
+            var stuffForBox = new List<Stuff>
+                                  {
+                                      new Stuff { Id = Guid.NewGuid(), Name = "Cheese", Type = Core.Enums.StuffType.Small },
+                                      new Stuff { Id = Guid.NewGuid(), Name = "Hammer", Type = Core.Enums.StuffType.Large }
+                                  };
 
             box.BunchOfStuff = stuffForBox;
 
             var pipe = new Pipe();
-            var allowedStuff = new List<Stuff>();
-            allowedStuff.Add(new Stuff { Id = Guid.NewGuid(), Name = "Cheese", Type = Core.Enums.StuffType.Small });
+            var allowedStuff = new List<Stuff>
+                                   {
+                                       new Stuff { Id = Guid.NewGuid(), Name = "Cheese", Type = Core.Enums.StuffType.Small }
+                                   };
 
             pipe.AllowedStuff = allowedStuff;
 
             // Act
-            var result = pipeService.DoesPipeAcceptBox(pipe, box);
+            var result = this.PipeService.DoesPipeAcceptBox(pipe, box);
 
             // Assert
             Assert.AreEqual(true, result);
@@ -48,19 +55,23 @@ namespace BoxDemo.Test
         {
             // Arrange
             var box = new Box();
-            var stuffForBox = new List<Stuff>();
-            stuffForBox.Add(new Stuff { Id = Guid.NewGuid(), Name = "Hammer", Type = Core.Enums.StuffType.Large });
+            var stuffForBox = new List<Stuff>
+                                  {
+                                      new Stuff { Id = Guid.NewGuid(), Name = "Hammer", Type = Core.Enums.StuffType.Large }
+                                  };
 
             box.BunchOfStuff = stuffForBox;
 
             var pipe = new Pipe();
-            var allowedStuff = new List<Stuff>();
-            allowedStuff.Add(new Stuff { Id = Guid.NewGuid(), Name = "Cheese", Type = Core.Enums.StuffType.Small });
+            var allowedStuff = new List<Stuff>
+                                   {
+                                       new Stuff { Id = Guid.NewGuid(), Name = "Cheese", Type = Core.Enums.StuffType.Small }
+                                   };
 
             pipe.AllowedStuff = allowedStuff;
 
             // Act
-            var result = pipeService.DoesPipeAcceptBox(pipe, box);
+            var result = this.PipeService.DoesPipeAcceptBox(pipe, box);
 
             // Assert
             Assert.AreEqual(false, result);

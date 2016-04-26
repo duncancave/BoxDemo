@@ -1,10 +1,11 @@
-﻿using BoxDemo.Data.Entities;
-using BoxDemo.Service.Interfaces;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace BoxDemo.Service
+﻿namespace BoxDemo.Service
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using BoxDemo.Data.Entities;
+    using BoxDemo.Service.Interfaces;
+
     public class PipeService : IPipeService
     {
         /// <summary>
